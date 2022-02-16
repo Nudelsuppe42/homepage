@@ -19,18 +19,7 @@ import Page from "../components/Page";
 import ProjectCard from "../components/ProjectCard";
 
 const Home: NextPage = () => {
-  const DarkTooltip = styled(({ className, ...props }) => (
-    <Tooltip {...props} arrow classes={{ popper: className }} />
-  ))(({ theme }) => ({
-    [`& .${tooltipClasses.arrow}`]: {
-      color: theme.palette.common.black,
-    },
-    [`& .${tooltipClasses.tooltip}`]: {
-      backgroundColor: theme.palette.common.black,
-      maxWidth: "none",
-      fontSize: "1rem",
-    },
-  }));
+  
 
   return (
     <Page>
@@ -107,7 +96,7 @@ const Home: NextPage = () => {
           .
           <br />
           In my free time i like to play{" "}
-          <DarkTooltip title="I highligh suggest you play Cities Skylines! And listen to `1984`">
+          <Tooltip title="I highligh suggest you play Cities Skylines! And listen to `1984`">
             <Typography
               variant="body1"
               component="p"
@@ -118,7 +107,7 @@ const Home: NextPage = () => {
             >
               various games and listen to music.
             </Typography>
-          </DarkTooltip>
+          </Tooltip>
         </Typography>
         <Typography
           variant="h2"
