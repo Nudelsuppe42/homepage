@@ -19,7 +19,14 @@ interface CardProps {
 export default function ProjectCard({ logo, title, content, href }: CardProps) {
   return (
     <Box sx={{ minWidth: 275 }}>
-      <Card variant="outlined" sx={{borderRadius:0, borderLeft:4, borderColor:"rgb(255, 196, 0,0.8)"}}>
+      <Card
+        variant="outlined"
+        sx={{
+          borderRadius: 0,
+          borderLeft: 4,
+          borderColor: "rgb(255, 196, 0,0.8)",
+        }}
+      >
         <CardHeader
           title={
             <Typography
@@ -38,7 +45,7 @@ export default function ProjectCard({ logo, title, content, href }: CardProps) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" href={href}>
+          <Button size="small" href={href} sx={{ borderRadius: "0" }}>
             Visit
           </Button>
         </CardActions>
